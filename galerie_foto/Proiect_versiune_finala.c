@@ -17,8 +17,8 @@
 #define MENU_COLOR "\033[1;36m"
 #define BOLD_MAGENTA "\033[1;35m"
 
-const char* FISIER_ALBUME = "D:/Facultate/Anu 1/Semestrul 2/PP/albume1.txt";
-const char* FISIER_POZE = "D:/Facultate/Anu 1/Semestrul 2/PP/poze1.txt";
+const char* FISIER_ALBUME = "D:/Facultate/Anu 1/Semestrul 2/galerie_foto/albume1.txt";
+const char* FISIER_POZE = "D:/Facultate/Anu 1/Semestrul 2/galerie_foto/poze1.txt";
 
 typedef struct {
     char nume[100];
