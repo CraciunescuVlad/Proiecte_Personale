@@ -52,5 +52,5 @@ Aceste proiecte sunt în curs de dezvoltare și actualizare. Sunt rezultatul aut
 ## 🔗 Contact
 
 Dacă ai întrebări sau feedback, mă poți contacta la:  
-📧 [email@example.com] *(înlocuiește cu adresa ta)*
+📧 [vlad.craciunescu06@e-uvt.ro]
 
