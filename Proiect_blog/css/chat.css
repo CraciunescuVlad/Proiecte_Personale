@@ -1,0 +1,132 @@
+/* CSS styles */
+body {
+    background-color: #FFFDD0; /* Fundal în culoarea principală a site-ului */
+    display: flex;
+    justify-content: center; /* Centrează orizontal */
+    align-items: center; /* Centrează vertical */
+    height: 100vh; /* Ocupă întreaga înălțime a paginii */
+    margin: 0; /* Elimină marginile implicite */
+    flex-direction: column; /* Elemente aranjate vertical */
+    font-family: 'Garamond', serif; /* Font elegant */
+    color: #2D2A32; /* Culoare rafinată pentru text */
+}
+
+.navbar {
+    background-color: #05204A; /* Culoarea de fundal */
+    padding: 10px 0;
+    position: fixed; /* Bara fixă sus */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out; /* ADĂUGAT aici! */
+    z-index: 1000; /* ca să rămână deasupra conținutului */
+}
+
+/* Lista de navigare */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Aliniere pe orizontală */
+    padding: 0;
+}
+
+/* Elemente de listă */
+.navbar ul li {
+    margin: 0 15px;
+}
+
+/* Linkuri din navbar */
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+/* Efect hover pe linkuri */
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.navbar.hide {
+    transform: translateY(-100%);
+    /*transition: transform 0.3s ease-in-out;*/
+}
+
+.chat-container {
+    max-width: 600px; /* Dimensiune maximă a containerului */
+    width: 90%; /* Se ajustează pe ecrane mai mici */
+    height: 500px; /* Înălțimea containerului */
+    padding: 20px; /* Spațiere interioară */
+    background-color: #FAF3E0; /* Culoare de hârtie veche */
+    border-radius: 12px; /* Colțuri rotunjite */
+    border: 2px solid #C1A57B; /* Margine aurie subtilă */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Umbră mai pronunțată pentru un efect elegant */
+    font-size: 18px;
+
+    margin-bottom: 20px; /* Spațiu sub chat */
+    overflow-y: auto; /* Permite derularea mesajelor */
+}
+
+/* Stiluri pentru mesaje */
+.message {
+    margin-bottom: 15px; /* Spațiere între mesaje */
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 17px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+/* Stil mesaj de la bot */
+.message.bot {
+    background-color: #EAE0C8; /* Fundal clasic */
+    border-left: 4px solid #C1A57B; /* Accent elegant */
+    padding-left: 15px;
+}
+
+/* Stil mesaj de la utilizator */
+.message.user {
+    background-color: #C1A57B; /* Fundal sofisticat */
+    color: #FFF; /* Text alb pentru contrast */
+    text-align: right;
+    align-self: flex-end;
+}
+
+/* Stil pentru input */
+#chat-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #C1A57B;
+    border-radius: 8px;
+    background-color: #FAF3E0;
+    font-size: 16px;
+    color: #2D2A32;
+    font-family: 'Garamond', serif;
+}
+
+#chat-form button {
+    background-color: #C1A57B;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 8px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Garamond', serif;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#chat-form button:hover {
+    background-color: #A38967; /* Efect elegant pe hover */
+}

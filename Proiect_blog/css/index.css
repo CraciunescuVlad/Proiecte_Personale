@@ -1,0 +1,230 @@
+body{
+    background-color: #FFFDD0;
+}
+h1{
+    text-align: center;
+    color: #05204A;
+}
+/* Bara de navigare */
+.navbar {
+    background-color: #05204A; /* Culoarea de fundal */
+    padding: 10px 0;
+    position: fixed; /* Bara fixă sus */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out; /* ADĂUGAT aici! */
+    z-index: 1000; /* ca să rămână deasupra conținutului */
+}
+
+/* Lista de navigare */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Aliniere pe orizontală */
+    padding: 0;
+}
+
+/* Elemente de listă */
+.navbar ul li {
+    margin: 0 15px;
+}
+
+/* Linkuri din navbar */
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+/* Efect hover pe linkuri */
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.navbar.hide {
+    transform: translateY(-100%);
+    /*transition: transform 0.3s ease-in-out;*/
+}
+
+/*.navbar.show {*/
+/*    transform: translateY(0);*/
+/*    transition: transform 0.3s ease-in-out;*/
+/*}*/
+
+/* Stil pentru conținut ca să nu fie ascuns de navbar */
+.content {
+    padding-top: 60px;
+    text-align: center;
+}
+/* Header */
+.hero {
+    text-align: center;
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #794E3D;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #ff3b2f;
+}
+
+/* Articole recente */
+.articles {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.article-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.article-list article {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 280px;
+}
+
+.article-list article img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.article-list article h3 {
+    margin: 10px 0;
+}
+
+.article-list article a {
+    text-decoration: none;
+    color: #ff6f61;
+}
+
+.article-list article p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Secțiunea despre mine */
+.about {
+    display: flex;
+    max-width: 900px;
+    margin: 50px auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.about img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.about div {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-links a:hover {
+    text-decoration: underline;
+}
+
+/*!* Modal (Popup) *!*/
+/*.modal {*/
+/*    display: none;*/
+/*    position: fixed;*/
+/*    z-index: 1000;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*!* Conținutul popup-ului *!*/
+/*.modal-content {*/
+/*    background-color: white;*/
+/*    padding: 20px;*/
+/*    border-radius: 10px;*/
+/*    width: 60%;*/
+/*    max-width: 400px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*!* Buton de închidere *!*/
+/*.close {*/
+/*    position: absolute;*/
+/*    right: 15px;*/
+/*    top: 15px;*/
+/*    font-size: 24px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+
+/* Secțiunea articolelor */
+/*.articles {*/
+/*    opacity: 0; !* Inițial invizibil *!*/
+/*    transform: translateY(-20px); !* Puțin mai sus *!*/
+/*    transition: opacity 0.5s ease, transform 0.5s ease; !* Tranziție smooth *!*/
+/*    background-color: white;*/
+/*    padding: 20px;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);*/
+/*    width: 60%;*/
+/*    margin: 20px auto;*/
+/*    display: none; !* Inițial ascuns *!*/
+/*}*/
+
+/*!* Când apare, devine vizibil *!*/
+/*.articles.show {*/
+/*    display: block;*/
+/*    opacity: 1;*/
+/*    transform: translateY(0); !* Revine la poziția normală *!*/
+/*}*/

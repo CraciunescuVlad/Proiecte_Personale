@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sport</title>
+  <link rel="stylesheet" type="text/css" href="../css/sport.css">
+</head>
+<body>
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Acasă</a></li>
+    <li><a href="about.html">Despre</a></li>
+    <li><a href="formular.html">Formular</a></li>
+    <li><a href="chat.html">Contact</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+    <div class="left">
+        <h3>Personalizează pagină</h3>
+        <button onclick="resizeMiddle('increase')">🔍 Mărește conținutul</button>
+        <button onclick="resizeMiddle('decrease')">🔽 Micșorează conținutul</button>
+    </div>
+    <div class="middle">
+        <h1>Sport</h1>
+        <p>Sportul este adesea văzut ca o simplă activitate fizică, dar în realitate este o formă profundă de auto-disciplină, echilibru și dezvoltare personală. De la alergat și înot până la sporturi de echipă sau arte marțiale, fiecare formă de activitate sportivă contribuie nu doar la sănătatea fizică, ci și la formarea caracterului și a gândirii strategice.</p>
+        <p>Din punct de vedere fiziologic, practicarea regulată a sportului îmbunătățește funcțiile cardiovasculare, crește rezistența la efort și optimizează metabolismul. Activitatea fizică eliberează endorfine – așa-numiții "hormoni ai fericirii" – care reduc stresul, îmbunătățesc somnul și starea generală de bine. Alergarea, de exemplu, este una dintre cele mai eficiente forme de exercițiu, fiind accesibilă și ușor de integrat în rutina zilnică.</p>
+        <p>Dar sportul este mai mult decât o reacție biologică pozitivă. Este o școală a vieții. Înveți să perseverezi, să accepți eșecul, să te autoevaluezi și să îți depășești limitele. În sporturile individuale, ca alergarea sau ciclismul, accentul cade pe auto-motivație și constanță. În sporturile de echipă – fotbal, baschet, volei – se dezvoltă abilități precum cooperarea, comunicarea și leadership-ul.</p>
+        <p>De asemenea, sportul implică și o componentă tehnică semnificativă. Fiecare disciplină are o biomecanică specifică, tehnici precise, tactici și reguli clare. În spatele unei execuții aparent simple se află ore de antrenament, analiză video, planuri de alimentație și recuperare. În era modernă, sportul este susținut de tehnologie – dispozitive de monitorizare, aplicații de tracking, analize de performanță și chiar inteligență artificială care optimizează antrenamentele.</p>
+        <p>Un alt beneficiu al sportului este dezvoltarea cognitivă. Studii recente arată că exercițiile fizice regulate îmbunătățesc concentrarea, memoria și viteza de procesare a informației. Pe termen lung, acestea pot chiar întârzia declinul cognitiv și îmbunătăți capacitatea de luare a deciziilor – o legătură tot mai recunoscută între sport și performanța academică sau profesională.</p>
+        <p>Pentru mine, sportul înseamnă energie, claritate și auto-control. Este modul meu de a mă deconecta de la stresul cotidian și de a-mi reîncărca bateriile într-un mod activ. Fie că ies la o alergare scurtă sau particip la un meci cu prietenii, sportul îmi aduce echilibru și claritate mentală. În plus, mă învață constant că progresul real vine din efort susținut, nu din rezultate rapide.</p>
+    </div>
+    <div class="right">
+        <div class="hobbies">
+            <h2>Hobby-urile mele</h2>
+            <div class="hobby-container">
+                <a href="programare.html" class="hobby-card">
+                    <h3>Programare</h3>
+                    <p>Îmi place să învăț tehnologii noi și să creez aplicații web.</p>
+                </a>
+                <a href="muzica.html" class="hobby-card">
+                    <h3>Muzică</h3>
+                    <p>Îmi place să ascult muzică</p>
+                </a>
+                <a href="gaming.html" class="hobby-card">
+                    <h3>Gaming</h3>
+                    <p>Îmi plac jocurile video, în special cele de strategie.</p>
+                </a>
+                <a href="sport.html" class="hobby-card">
+                    <h3>Sportul</h3>
+                    <p>Îmi place sa fac sport, în special sa alerg</p>
+                </a>
+                <a href="citit.html" class="hobby-card">
+                    <h3>Cititul</h3>
+                    <p>Îmi place sa citesc</p>
+                </a>
+                <a href="plimbatul.html" class="hobby-card">
+                    <h3>Plimbatul</h3>
+                    <p>Îmi place sa ma plimb</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scroll în jos => ascunde navbar
+            navbar.classList.add('hide');
+        } else {
+            // Scroll în sus => arată navbar
+            navbar.classList.remove('hide');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+</script>
+<script src="../java/sport.js"></script>
+</body>
+</html>

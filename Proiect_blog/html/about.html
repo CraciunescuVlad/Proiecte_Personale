@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My_Blog</title>
+    <link rel="stylesheet" type="text/css" href="../css/about.css">
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="about.html">Despre</a></li>
+        <li><a href="formular.html">Formular</a></li>
+        <li><a href="chat.html">Contact</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+    </ul>
+</nav>
+<section class="hobbies">
+    <h2>Hobby-urile mele</h2>
+    <div class="hobby-container">
+        <a href="programare.html" class="hobby-card">
+            <img src="../poze/laptop-3214756_1920.png" alt="Programare">
+            <h3>Programare</h3>
+            <p>Îmi place să învăț tehnologii noi și să creez aplicații web.</p>
+        </a>
+        <a href="muzica.html" class="hobby-card">
+            <img src="../poze/radio-158399_1920.png" alt="Muzică">
+            <h3>Muzică</h3>
+            <p>Îmi place să ascult muzică</p>
+        </a>
+        <a href="gaming.html" class="hobby-card">
+            <img src="../poze/mobile-gaming-3667430_1920.png" alt="Gaming">
+            <h3>Gaming</h3>
+            <p>Îmi plac jocurile video, în special cele de strategie.</p>
+        </a>
+        <a href="sport.html" class="hobby-card">
+            <img src="../poze/man-6107447_1920.png" alt="Sport">
+            <h3>Sportul</h3>
+            <p>Îmi place sa fac sport, în special sa alerg</p>
+        </a>
+        <a href="citit.html" class="hobby-card">
+            <img src="../poze/book-306468_1920.png" alt="Citit">
+            <h3>Cititul</h3>
+            <p>Îmi place sa citesc</p>
+        </a>
+        <a href="plimbatul.html" class="hobby-card">
+            <img src="../poze/man-297417_1920.png", alt="Plimbatul">
+            <h3>Plimbatul</h3>
+            <p>Îmi place sa ma plimb</p>
+        </a>
+    </div>
+</section>
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scroll în jos => ascunde navbar
+            navbar.classList.add('hide');
+        } else {
+            // Scroll în sus => arată navbar
+            navbar.classList.remove('hide');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+</script>
+</body>
+</html>

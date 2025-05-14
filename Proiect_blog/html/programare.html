@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programare</title>
+    <link rel="stylesheet" type="text/css" href="../css/programare.css">
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="about.html">Despre</a></li>
+        <li><a href="formular.html">Formular</a></li>
+        <li><a href="chat.html">Contact</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="left">
+        <h3>Personalizează pagină</h3>
+        <button onclick="resizeMiddle('increase')">🔍 Mărește conținutul</button>
+        <button onclick="resizeMiddle('decrease')">🔽 Micșorează conținutul</button>
+    </div>
+    <div class="middle">
+        <h1>Programare</h1>
+        <p>Programarea este mai mult decât o simplă scriere de cod – este un mod de a gândi, de a structura idei și de a construi soluții. Este limbajul prin care comunicăm cu tehnologia, învățăm mașinile să execute sarcini și creăm aplicații care ne fac viața mai ușoară, mai conectată și mai eficientă.</p>
+        <p>La prima vedere, poate părea pur tehnică: sintaxă, reguli, erori de compilare, buguri. Însă, în spatele fiecărei linii de cod se ascunde un proces profund de gândire analitică și creativitate. Programarea combină logica matematică riguroasă cu gândirea abstractă și intuiția. Într-un anumit sens, este o artă digitală: scrii cod nu doar ca să funcționeze, ci ca să fie clar, elegant și scalabil.</p>
+        <p>Pe măsură ce te adâncești în lumea programării, înveți să gândești în termeni de algoritmi – pași bine definiți pentru a rezolva o problemă. Îți antrenezi mintea să caute cele mai eficiente soluții, să optimizeze resursele și să prevină erorile înainte ca ele să apară. Fie că lucrezi în C, Python, JavaScript sau alt limbaj, principiile de bază rămân aceleași: structuri de date, controlul fluxului, modularitate și gândire logică.</p>
+        <p>Dar programarea nu este doar pentru calculatoare – este pentru oameni. Codul scris trebuie să fie citibil, întreținut și înțeles de alți programatori. Aici intervine componenta umană: colaborarea, documentarea, versionarea cu Git, lucrul în echipe și comunicarea eficientă a ideilor. De aceea, învățarea programării nu înseamnă doar să "înveți un limbaj", ci să înveți cum să rezolvi probleme reale, să colaborezi și să creezi software de calitate.</p>
+        <p>De asemenea, programarea îți oferă libertate. Poți crea propriul tău website, o aplicație care să ajute oameni sau chiar un joc care să-ți exprime viziunea. Cu resursele disponibile astăzi – documentații, comunități online, tutoriale – nu ai nevoie decât de curiozitate și perseverență.</p>
+        <p>În concluzie, programarea este o abilitate esențială în era digitală. Te învață cum să gândești, cum să rezolvi probleme și cum să transformi ideile în realitate. Este un domeniu dinamic, plin de provocări, dar și de satisfacții. Iar dacă ai pasiune pentru logică, inovație și construcție – ai găsit locul potrivit.</p>
+    </div>
+    <div class="right">
+        <div class="hobbies">
+            <h2>Hobby-urile mele</h2>
+            <div class="hobby-container">
+                <a href="programare.html" class="hobby-card">
+                    <h3>Programare</h3>
+                    <p>Îmi place să învăț tehnologii noi și să creez aplicații web.</p>
+                </a>
+                <a href="muzica.html" class="hobby-card">
+                    <h3>Muzică</h3>
+                    <p>Îmi place să ascult muzică</p>
+                </a>
+                <a href="gaming.html" class="hobby-card">
+                    <h3>Gaming</h3>
+                    <p>Îmi plac jocurile video, în special cele de strategie.</p>
+                </a>
+                <a href="sport.html" class="hobby-card">
+                    <h3>Sportul</h3>
+                    <p>Îmi place sa fac sport, în special sa alerg</p>
+                </a>
+                <a href="citit.html" class="hobby-card">
+                    <h3>Cititul</h3>
+                    <p>Îmi place sa citesc</p>
+                </a>
+                <a href="plimbatul.html" class="hobby-card">
+                    <h3>Plimbatul</h3>
+                    <p>Îmi place sa ma plimb</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scroll în jos => ascunde navbar
+            navbar.classList.add('hide');
+        } else {
+            // Scroll în sus => arată navbar
+            navbar.classList.remove('hide');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+</script>
+<script src="../java/programare.js"></script>
+</body>
+</html>
