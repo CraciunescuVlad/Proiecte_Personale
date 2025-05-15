@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My_Blog</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css'%}">
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="about.html">Despre</a></li>
+        <li><a href="formular.html">Formular</a></li>
+        <li><a href="chat.html">Contact</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Bine ai venit pe Blogul Meu!</h1>
+    <p style="color: #05204A">Împărtășesc gânduri, idei și experiențe despre programare, tehnologie și viață.</p>
+    <a href="about.html" class="btn">Vezi hobbiurile</a>
+</header>
+
+<section class="articles">
+    <h2>Ultimele articole</h2>
+    <div class="article-list">
+        <article>
+            <img src="../poze/web-4003037_1920.jpg" alt="Imagine articol">
+            <h3><a href="https://ramonnastase.ro/blog/%F0%9F%92%BB-cum-sa-inveti-programare-de-la-0-folosind-python-invata-programare-2/">Cum să înveți programare mai rapid</a></h3>
+            <p>Descoperă cele mai eficiente metode de a învăța programare...</p>
+        </article>
+
+        <article>
+            <img src="../poze/web-design-3411373_1920.jpg" alt="Imagine articol">
+            <h3><a href="https://brahmabit.ro/top-10-trucuri-de-web-design-care-transforma-vizitatorii-in-clienti/">10 trucuri pentru un site web rapid</a></h3>
+            <p>Viteză = succes! Află cum să îți optimizezi site-ul...</p>
+        </article>
+
+        <article>
+            <img src="../poze/frontend-4342425_1920.png" alt="Imagine articol">
+            <h3><a href="https://www.w3schools.com/js/default.asp   ">Cum să înveți JavaScript în 2025?</a></h3>
+            <p>Un limbaj esențial pentru dezvoltatori web - merită timpul investit?</p>
+        </article>
+    </div>
+</section>
+
+<section class="about">
+    <img src="../poze/icon-5355896_1920.png" alt="Imagine profil">
+    <div>
+        <h2>Despre mine</h2>
+        <p>Sunt un pasionat de programare și tehnologie. Scriu despre tot ce învăț și experimentez.</p>
+        <a href="about.html" class="btn">Află mai multe</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Blogul Meu - Toate drepturile rezervate</p>
+    <div class="social-links">
+        <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">Twitter</a>
+    </div>
+</footer>
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scroll în jos => ascunde navbar
+            navbar.classList.add('hide');
+        } else {
+            // Scroll în sus => arată navbar
+            navbar.classList.remove('hide');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+</script>
+</body>
+</html>

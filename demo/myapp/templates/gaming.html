@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gaming</title>
+  <link rel="stylesheet" type="text/css" href="../css/gaming.css">
+</head>
+<body>
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Acasă</a></li>
+    <li><a href="about.html">Despre</a></li>
+    <li><a href="formular.html">Formular</a></li>
+    <li><a href="chat.html">Contact</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="left">
+    <h3>Personalizează pagină</h3>
+    <button onclick="resizeMiddle('increase')">🔍 Mărește conținutul</button>
+    <button onclick="resizeMiddle('decrease')">🔽 Micșorează conținutul</button>
+  </div>
+  <div class="middle">
+    <h1>Gaming</h1>
+    <p>Gaming-ul este deseori perceput ca o formă de relaxare, o evadare din cotidian sau o simplă distracție. Totuși, pentru cei care îl explorează cu adevărat, gaming-ul este mult mai mult: este un univers complex în care se întâlnesc tehnologia, arta, strategia și psihologia. Este un domeniu care evoluează rapid, influențând nu doar industria divertismentului, ci și educația, medicina sau chiar comunicarea interpersonală.</p>
+    <p>În esență, un joc video este o simulare interactivă a unei lumi sau a unei situații, controlată de jucător prin intermediul unor reguli și obiective bine definite. Fie că vorbim de jocuri single-player cu povești elaborate sau de titluri multiplayer competitive, gaming-ul stimulează gândirea critică, coordonarea ochi-mână, memoria și reacțiile rapide. În jocuri de strategie sau simulare, precum Civilization sau Cities: Skylines, jucătorul trebuie să ia decizii complexe, să gestioneze resurse și să anticipeze efectele acțiunilor sale pe termen lung – abilități transferabile în viața reală.</p>
+    <p>Din punct de vedere tehnic, industria jocurilor video este una dintre cele mai avansate la nivel de software. Game engine-uri precum Unity sau Unreal Engine permit dezvoltarea de lumi 3D complexe, cu fizică realistă, inteligență artificială și grafică spectaculoasă. Pentru pasionații de tehnologie, a înțelege cum funcționează un joc "pe dinăuntru" poate fi începutul unei cariere în dezvoltarea de jocuri sau software.</p>
+    <p>Gaming-ul este și un fenomen social. Jocurile online conectează milioane de oameni din toate colțurile lumii, care colaborează, concurează sau pur și simplu socializează în medii virtuale. Comunicațiile prin voice chat, stream-urile live și platformele precum Discord sau Twitch au transformat gaming-ul într-o formă de interacțiune și exprimare personală. Mai mult, esports – competițiile profesioniste de jocuri – au devenit spectacole globale, cu milioane de spectatori și premii impresionante.</p>
+    <p>În plus, jocurile pot avea un rol educativ. Sunt folosite în școli și universități pentru a învăța concepte din matematică, fizică, istorie sau chiar programare. Jocuri precum Kerbal Space Program pot învăța fizica orbitală, în timp ce Minecraft stimulează creativitatea și gândirea spațială.</p>
+    <p>Pentru mine, gaming-ul este o pasiune care îmbină plăcerea cu provocarea. Mă atrag jocurile care oferă libertate, strategie și imersiune – titluri în care pot construi, explora sau concura. Dar dincolo de distracție, gaming-ul m-a învățat răbdare, gândire logică și colaborare. Este un hobby care, atunci când este echilibrat, poate avea beneficii reale asupra dezvoltării personale.</p>
+  </div>
+  <div class="right">
+    <div class="hobbies">
+      <h2>Hobby-urile mele</h2>
+      <div class="hobby-container">
+        <a href="programare.html" class="hobby-card">
+          <h3>Programare</h3>
+          <p>Îmi place să învăț tehnologii noi și să creez aplicații web.</p>
+        </a>
+        <a href="muzica.html" class="hobby-card">
+          <h3>Muzică</h3>
+          <p>Îmi place să ascult muzică</p>
+        </a>
+        <a href="gaming.html" class="hobby-card">
+          <h3>Gaming</h3>
+          <p>Îmi plac jocurile video, în special cele de strategie.</p>
+        </a>
+        <a href="sport.html" class="hobby-card">
+          <h3>Sportul</h3>
+          <p>Îmi place sa fac sport, în special sa alerg</p>
+        </a>
+        <a href="citit.html" class="hobby-card">
+          <h3>Cititul</h3>
+          <p>Îmi place sa citesc</p>
+        </a>
+        <a href="plimbatul.html" class="hobby-card">
+          <h3>Plimbatul</h3>
+          <p>Îmi place sa ma plimb</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scroll în jos => ascunde navbar
+      navbar.classList.add('hide');
+    } else {
+      // Scroll în sus => arată navbar
+      navbar.classList.remove('hide');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
+<script src="../java/gaming.js"></script>
+</body>
+</html>

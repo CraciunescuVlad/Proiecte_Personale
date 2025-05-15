@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plimbatul</title>
+  <link rel="stylesheet" type="text/css" href="../css/plimbatul.css">
+</head>
+<body>
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Acasă</a></li>
+    <li><a href="about.html">Despre</a></li>
+    <li><a href="formular.html">Formular</a></li>
+    <li><a href="chat.html">Contact</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <div class="left">
+    <!--        <h1>Beneficiile plimbatului</h1>-->
+    <!--        <p>1.Îmbunătățirea sănătății fizice</p>-->
+    <!--        <p>2.Reducerea stresului și a anxietății</p>-->
+    <!--        <p>3.Clarificarea gândurilor</p>-->
+    <!--        <p>4.Stimularea creativității</p>-->
+    <!--        <p>5.Îmbunătățirea stării de spirit</p>-->
+    <!--        <p>6.Conectarea cu natura și cu mediul înconjurător</p>-->
+    <h3>Personalizează pagină</h3>
+    <button onclick="resizeMiddle('increase')">🔍 Mărește conținutul</button>
+    <button onclick="resizeMiddle('decrease')">🔽 Micșorează conținutul</button>
+  </div>
+  <div class="middle">
+    <h1>Plimbatul</h1>
+    <p>Plimbatul e unul dintre cele mai subestimate hobby-uri, dar pentru mine e ca un „reset” fizic și mental. Când ies la plimbare, nu doar că mă mișc, dar simt efectiv cum mintea mea se limpezește, gândurile se așază, iar stresul dispare treptat. E o combinație între activitate fizică ușoară și terapie mentală în aer liber.</p>
+    <p>Din punct de vedere tehnic, plimbatul activează circulația sângelui, îmbunătățește oxigenarea creierului și reduce nivelul de cortizol – hormonul stresului. În termeni mai simpli, te ajută să gândești mai clar și să te simți mai bine. Mie îmi place să folosesc plimbările și ca timp de reflecție, brainstorming sau pur și simplu deconectare de la tehnologie. Uneori ascult muzică sau podcasturi, alteori merg în liniște completă, fiind atent la tot ce se întâmplă în jur.</p>
+    <p>Ce-mi place cel mai mult e că nu e nevoie de echipamente, programări sau planuri complicate. Doar îți pui pantofii și ieși pe ușă. Plimbatul este scalabil – poate fi o tură scurtă de 10 minute sau o explorare de 2 ore. E flexibil, low-cost și 100% compatibil cu orice stil de viață. De multe ori, după o zi de muncă sau cursuri, o simplă plimbare de seară îmi reîncarcă bateriile mai eficient decât orice altceva.</p>
+    <p>Pe scurt, plimbatul e pentru mine un obicei zilnic care combină sănătatea fizică, claritatea mentală și plăcerea de a descoperi locuri, momente și idei noi. E simplu, dar incredibil de eficient.</p>
+  </div>
+  <div class="right">
+    <div class="hobbies">
+      <h2>Hobby-urile mele</h2>
+      <div class="hobby-container">
+        <a href="programare.html" class="hobby-card">
+          <h3>Programare</h3>
+          <p>Îmi place să învăț tehnologii noi și să creez aplicații web.</p>
+        </a>
+        <a href="muzica.html" class="hobby-card">
+          <h3>Muzică</h3>
+          <p>Îmi place să ascult muzică</p>
+        </a>
+        <a href="gaming.html" class="hobby-card">
+          <h3>Gaming</h3>
+          <p>Îmi plac jocurile video, în special cele de strategie.</p>
+        </a>
+        <a href="sport.html" class="hobby-card">
+          <h3>Sportul</h3>
+          <p>Îmi place sa fac sport, în special sa alerg</p>
+        </a>
+        <a href="citit.html" class="hobby-card">
+          <h3>Cititul</h3>
+          <p>Îmi place sa citesc</p>
+        </a>
+        <a href="plimbatul.html" class="hobby-card">
+          <h3>Plimbatul</h3>
+          <p>Îmi place sa ma plimb</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scroll în jos => ascunde navbar
+      navbar.classList.add('hide');
+    } else {
+      // Scroll în sus => arată navbar
+      navbar.classList.remove('hide');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
+<script src="../java/plimbatul.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Muzica</title>
+  <link rel="stylesheet" type="text/css" href="../css/muzica.css">
+</head>
+<body>
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Acasă</a></li>
+    <li><a href="about.html">Despre</a></li>
+    <li><a href="formular.html">Formular</a></li>
+    <li><a href="chat.html">Contact</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="left">
+    <h3>Personalizează pagină</h3>
+    <button onclick="resizeMiddle('increase')">🔍 Mărește conținutul</button>
+    <button onclick="resizeMiddle('decrease')">🔽 Micșorează conținutul</button>
+  </div>
+  <div class="middle">
+    <h1>Muzica</h1>
+    <p>Muzica nu este doar sunet – este vibrație, matematică, exprimare și legătură umană. De mii de ani, oamenii au folosit muzica pentru a spune povești, a se relaxa, a se conecta sau a-și exprima trăirile interioare. Pentru mine, muzica este un hobby care transcende simplul act de a asculta – este o experiență completă, care îmbină tehnologia, arta și știința într-o formă profund personală.</p>
+    <p>Fie că vorbim despre genuri precum jazz, clasic, rock sau electronic, fiecare stil muzical are o structură tehnică unică. Ritmul, tonalitatea, armonia și melodia sunt componente esențiale care interacționează într-un mod calculat, dar fluid. Chiar și o simplă piesă pop poate fi analizată ca o ecuație sonoră, cu repetiții matematice, variații controlate și echilibru între tensiune și rezolvare.</p>
+    <p>Din punct de vedere tehnologic, muzica modernă se leagă profund de software și echipamente digitale. Aplicații precum FL Studio, Ableton Live sau GarageBand transformă laptopul într-un studio complet. În același timp, dezvoltarea dispozitivelor MIDI, sintetizatoarelor și efectelor digitale a permis o libertate de creație nemaiîntâlnită până acum. Practic, oricine cu pasiune și răbdare poate deveni producător muzical.</p>
+    <p>Ascultarea muzicii are și un impact psihologic dovedit. Aceasta stimulează centrii emoționali ai creierului, îmbunătățește concentrarea, reduce anxietatea și chiar ajută în procesele de învățare. Muzica clasică este adesea asociată cu creșterea capacității de memorare, în timp ce beat-urile electronice sau lo-fi pot favoriza productivitatea. Alegerea muzicii potrivite poate schimba complet starea de spirit sau nivelul de energie.</p>
+    <p>Pentru cei care studiază sau cântă la un instrument, muzica devine și un exercițiu de coordonare și disciplină. Fiecare notă interpretată corect presupune memorie musculară, atenție auditivă și expresivitate. Chiar și fără cunoștințe avansate de teorie muzicală, simpla exersare a unui instrument antrenează răbdarea, concentrarea și creativitatea.</p>
+    <p>Ce îmi place cel mai mult la muzică este că nu are o singură formă de consum – o poți asculta, crea, remixa, analiza sau pur și simplu simți. Într-o zi poți explora o simfonie clasică, iar în alta poți descoperi beat-uri trap sau linii melodice indie. Nu există limite rigide – doar posibilități infinite de expresie.</p>
+  </div>
+  <div class="right">
+    <div class="hobbies">
+      <h2>Hobby-urile mele</h2>
+      <div class="hobby-container">
+        <a href="programare.html" class="hobby-card">
+          <h3>Programare</h3>
+          <p>Îmi place să învăț tehnologii noi și să creez aplicații web.</p>
+        </a>
+        <a href="muzica.html" class="hobby-card">
+          <h3>Muzică</h3>
+          <p>Îmi place să ascult muzică</p>
+        </a>
+        <a href="gaming.html" class="hobby-card">
+          <h3>Gaming</h3>
+          <p>Îmi plac jocurile video, în special cele de strategie.</p>
+        </a>
+        <a href="sport.html" class="hobby-card">
+          <h3>Sportul</h3>
+          <p>Îmi place sa fac sport, în special sa alerg</p>
+        </a>
+        <a href="citit.html" class="hobby-card">
+          <h3>Cititul</h3>
+          <p>Îmi place sa citesc</p>
+        </a>
+        <a href="plimbatul.html" class="hobby-card">
+          <h3>Plimbatul</h3>
+          <p>Îmi place sa ma plimb</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scroll în jos => ascunde navbar
+      navbar.classList.add('hide');
+    } else {
+      // Scroll în sus => arată navbar
+      navbar.classList.remove('hide');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
+<script src="../java/muzica.js"></script>
+</body>
+</html>

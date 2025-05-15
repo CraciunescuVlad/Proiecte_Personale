@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Citit</title>
+  <link rel="stylesheet" type="text/css" href="../css/citit.css">
+</head>
+<body>
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Acasă</a></li>
+    <li><a href="about.html">Despre</a></li>
+    <li><a href="formular.html">Formular</a></li>
+    <li><a href="chat.html">Contact</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="left">
+    <h3>Personalizează pagină</h3>
+    <button onclick="resizeMiddle('increase')">🔍 Mărește conținutul</button>
+    <button onclick="resizeMiddle('decrease')">🔽 Micșorează conținutul</button>
+  </div>
+  <div class="middle">
+    <h1>Citit</h1>
+    <p>Cititul este unul dintre cele mai accesibile, dar și mai valoroase hobby-uri. Este o activitate liniștită, dar extrem de puternică, care ne conectează la idei, lumi imaginare, cunoștințe și perspective diverse. De la romane clasice și science-fiction, până la articole științifice sau cărți de dezvoltare personală, lectura deschide porți către universuri care, altfel, ar rămâne inaccesibile.</p>
+    <p>Din punct de vedere tehnic, cititul este o activitate cognitivă complexă. În spatele fiecărei pagini citite se desfășoară un proces sofisticat de decodificare vizuală, interpretare semantică și integrare logică. Creierul lucrează intens: asociază idei, construiește imagini mentale, anticipează acțiuni și analizează relații între personaje sau concepte. Practic, lectura este o formă de „antrenament mental” care dezvoltă gândirea critică, memoria și capacitatea de concentrare.</p>
+    <p>Lectura are beneficii demonstrabile asupra sănătății psihice. Studiile arată că persoanele care citesc regulat au un nivel mai scăzut de stres, o empatie mai mare și o capacitate mai bună de autoreflecție. Cititul de ficțiune, în special, îmbunătățește inteligența emoțională, pentru că ne pune în pielea altor personaje și ne ajută să înțelegem mai bine trăirile și motivațiile celorlalți.</p>
+    <p>Un alt avantaj al cititului este autonomia informațională. Într-o eră digitală, în care suntem bombardați constant cu date, lectura profundă ne învață să filtrăm informațiile, să înțelegem contextul și să ne construim propriile opinii. Fie că este vorba despre un manual de programare, un articol de psihologie sau o carte despre filozofie, fiecare pagină adaugă un strat de cunoaștere.</p>
+    <p>Cititul nu mai înseamnă doar cărți fizice. Cu ajutorul tehnologiei, avem acces la biblioteci întregi printr-un singur ecran: ebook-uri, articole online, PDF-uri sau aplicații precum Kindle și Audible. Poți citi pe drum, în pauze sau seara, cu un singur swipe. Iar faptul că poți ajusta fontul, culoarea sau modul de afișare face lectura mai accesibilă ca oricând.</p>
+    <p>Un alt aspect fascinant este diversitatea tematică: cititul nu te limitează la un domeniu anume. Poți învăța limbaje de programare, descoperi istoria civilizațiilor, înțelege fizica cuantică sau pur și simplu să te pierzi în fantezie. Este un hobby care se poate adapta oricărei curiozități și oricărui ritm personal.</p>
+    <p>În concluzie, cititul nu este doar un mod de a petrece timpul – este un instrument de dezvoltare personală, o sursă de inspirație și o evadare intelectuală. Este o activitate care îmbină liniștea cu progresul, imaginația cu rațiunea și relaxarea cu învățarea. Iar pentru cei care iubesc cunoașterea, cititul nu este un simplu hobby – este un stil de viață.</p>
+  </div>
+  <div class="right">
+    <div class="hobbies">
+      <h2>Hobby-urile mele</h2>
+      <div class="hobby-container">
+        <a href="programare.html" class="hobby-card">
+          <h3>Programare</h3>
+          <p>Îmi place să învăț tehnologii noi și să creez aplicații web.</p>
+        </a>
+        <a href="muzica.html" class="hobby-card">
+          <h3>Muzică</h3>
+          <p>Îmi place să ascult muzică</p>
+        </a>
+        <a href="gaming.html" class="hobby-card">
+          <h3>Gaming</h3>
+          <p>Îmi plac jocurile video, în special cele de strategie.</p>
+        </a>
+        <a href="sport.html" class="hobby-card">
+          <h3>Sportul</h3>
+          <p>Îmi place sa fac sport, în special sa alerg</p>
+        </a>
+        <a href="citit.html" class="hobby-card">
+          <h3>Cititul</h3>
+          <p>Îmi place sa citesc</p>
+        </a>
+        <a href="plimbatul.html" class="hobby-card">
+          <h3>Plimbatul</h3>
+          <p>Îmi place sa ma plimb</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scroll în jos => ascunde navbar
+      navbar.classList.add('hide');
+    } else {
+      // Scroll în sus => arată navbar
+      navbar.classList.remove('hide');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
+<script src="../java/citit.js"></script>
+</body>
+</html>

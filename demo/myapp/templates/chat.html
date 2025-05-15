@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="about.html">Despre</a></li>
+        <li><a href="formular.html">Formular</a></li>
+        <li><a href="chat.html">Contact</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+    </ul>
+</nav>
+<div class="chat-wrapper">
+    <h1 class="chat-title">The ChatBot</h1>
+
+    <div class="chat-container" id="chat-container"></div>
+
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Type your answer..." autocomplete="off">
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<script src="../java/chat.js"></script>
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scroll în jos => ascunde navbar
+            navbar.classList.add('hide');
+        } else {
+            // Scroll în sus => arată navbar
+            navbar.classList.remove('hide');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+</script>
+</body>
+</html>
