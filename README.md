@@ -87,6 +87,7 @@ cd build
 cmake ..
 cmake --build .
 ./biblioteca_ui
+```
 
 ## 📌 Notă
 
