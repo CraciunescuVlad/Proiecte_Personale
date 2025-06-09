@@ -45,13 +45,13 @@ Migrare a blogului static într-o aplicație dinamică cu Django:
 
 ---
 
-# 📚 Biblioteca Virtuală
+### 4. Biblioteca Virtuală
 
 Aplicație C++ cu interfață grafică (Dear ImGui) și interacțiune în terminal, care permite gestiunea și utilizarea unei biblioteci virtuale, oferind funcționalități distincte pentru **Administrator** și **Utilizator**.
 
 ---
 
-## 🔧 Cerințe
+## Cerințe
 
 - CMake ≥ 3.10
 - MinGW sau alt compilator C++ cu suport C++17
@@ -61,7 +61,7 @@ Aplicație C++ cu interfață grafică (Dear ImGui) și interacțiune în termin
 
 ---
 
-## 🏗️ Structură
+## Structură
 
 ```
 Biblioteca_virtuala/
@@ -83,7 +83,7 @@ Biblioteca_virtuala/
 
 ---
 
-## ▶️ Cum compilez și rulez?
+##  Cum compilez și rulez?
 
 ### 1. Configurare cu CMake
 
@@ -128,34 +128,34 @@ cd build
 
 ---
 
-## 👤 Modul Utilizator
+## Modul Utilizator
 
 Funcționalități disponibile:
 
-- ✅ Adăugare carte în coș
-- 🔁 Modificare număr exemplare
-- ❌ Ștergere carte din coș
-- 📋 Vizualizare coș
-- 📦 Împrumut (dacă există în stoc)
-- 🎨 Interfață grafică (Dear ImGui)
-- 🧪 Validări (numere negative, carte inexistentă, coș gol etc.)
+-  Adăugare carte în coș
+-  Modificare număr exemplare
+-  Ștergere carte din coș
+-  Vizualizare coș
+-  Împrumut (dacă există în stoc)
+-  Interfață grafică (Dear ImGui)
+-  Validări (numere negative, carte inexistentă, coș gol etc.)
 
 ---
 
-## 🔐 Modul Administrator
+## Modul Administrator
 
 Funcționalități disponibile:
 
-- ➕ Adăugare carte în bibliotecă
-- ❌ Ștergere carte
-- 🔁 Modificare stoc
-- 📚 Vizualizare toate cărțile
-- 📂 Vizualizare fișe de împrumut
-- 🧪 Validări (stoc negativ, ISBN inexistent etc.)
+-  Adăugare carte în bibliotecă
+-  Ștergere carte
+-  Modificare stoc
+-  Vizualizare toate cărțile
+-  Vizualizare fișe de împrumut
+-  Validări (stoc negativ, ISBN inexistent etc.)
 
 ---
 
-## 🗃️ Salvare date
+## Salvare date
 
 Fișierele persistente folosite:
 
@@ -165,14 +165,14 @@ Fișierele persistente folosite:
 
 ---
 
-## 🙋‍♂️ Autor
+## Autor
 
 Crăciunescu Vlad – Facultatea de Matematică și Informatică, 2025  
 Proiect realizat în cadrul cursului de Programare C++
 
 ---
 
-## 📜 Licență
+## Licență
 
 Proiect didactic, realizat în scop educațional.  
 Utilizarea în afara contextului academic nu este permisă fără acordul autorului.
