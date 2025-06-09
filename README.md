@@ -45,55 +45,137 @@ Migrare a blogului static într-o aplicație dinamică cu Django:
 
 ---
 
-# 4. Biblioteca Virtuală – proiect C++
+# 📚 Biblioteca Virtuală
 
-Acesta este un proiect de aplicație desktop pentru gestiunea și utilizarea unei biblioteci virtuale, dezvoltat în C++ ca parte din activitatea universitară.
-
-## ✅ Funcționalități actuale (în dezvoltare)
-- Vizualizare listă de cărți din fișier
-- Interfață grafică în C++ folosind **Dear ImGui** + **GLFW** + **OpenGL**
-- Gestionare fișiere locale (`carti.txt`, `cos_utilizator.txt`, `imprumuturi.txt`)
-- Cod modular: `Carte`, `Administrator`, `Utilizator`, `GestionareFisiere`, etc.
-
-## 🧭 Obiectiv
-Crearea unei aplicații complete de bibliotecă virtuală:
-- cu UI grafic
-- două moduri de utilizare: administrator și utilizator
-- gestionare locală a datelor
-- ulterior, extensie cu frontend web
-
-## 🚧 Stare actuală
-
-> ⚠️ Proiectul nu este încă finalizat. Va fi complet funcțional până la **mijlocul lunii iunie**.
-
-Pe măsură ce dezvoltarea avansează, voi publica și varianta cu **frontend HTML + JavaScript** ce comunică cu backend-ul C++.
+Aplicație C++ cu interfață grafică (Dear ImGui) și interacțiune în terminal, care permite gestiunea și utilizarea unei biblioteci virtuale, oferind funcționalități distincte pentru **Administrator** și **Utilizator**.
 
 ---
 
-## 🔧 Cerințe minime pentru compilare
+## 🔧 Cerințe
 
-- [x] CMake 3.20+
-- [x] Compilator C++20
-- [x] [Dear ImGui](https://github.com/ocornut/imgui)
-- [x] [GLFW](https://github.com/glfw/glfw)
+- CMake ≥ 3.10
+- MinGW sau alt compilator C++ cu suport C++17
+- GLFW
+- OpenGL
+- Dear ImGui (inclus ca sursă în proiect)
 
-## ▶️ Rulare aplicație grafică (`biblioteca_ui`)
+---
 
-După ce ai descărcat proiectul:
+## 🏗️ Structură
 
-```bash
-mkdir build
-cd build
-cmake ..
-cmake --build .
-./biblioteca_ui
+```
+Biblioteca_virtuala/
+├── CMakeLists.txt
+├── build/                  # Folder generat de CMake
+├── main.cpp                # Interfață grafică cu ImGui
+├── main_administrator.cpp  # Executabil CLI pentru Administrator
+├── main_utilizator.cpp     # Executabil CLI pentru Utilizator
+├── carti.txt               # Baza de date a cărților
+├── cos_utilizator.txt      # Cărțile din coșul utilizatorului
+├── imprumuturi.txt         # Istoricul împrumuturilor
+├── shared/classes/         # Cod sursă organizat pe module
+│   ├── administrator/
+│   ├── utilizator/
+│   ├── gestionareFisiere/
+│   └── ...
+└── external/               # GLFW + Dear ImGui (surse incluse)
 ```
 
-## 📌 Notă
+---
 
-Aceste proiecte sunt în curs de dezvoltare și actualizare. Sunt rezultatul autodidactismului și pasiunii pentru programare, și nu reprezintă aplicații de producție.
+## ▶️ Cum compilez și rulez?
 
-## 🔗 Contact
+### 1. Configurare cu CMake
+
+```bash
+cmake -S . -B build
+```
+
+### 2. Compilare
+
+```bash
+cmake --build build
+```
+
+### 3. Rulare interfață grafică (GUI)
+
+```bash
+cd build
+./Biblioteca_virtuala.exe
+```
+
+### 4. Rulare în terminal (CLI)
+
+#### Administrator:
+
+```bash
+./admin_biblioteca.exe adauga carte 123 Titlu Autor 5
+./admin_biblioteca.exe vizualizare carti
+./admin_biblioteca.exe sterge carte 123
+./admin_biblioteca.exe modifica carte 123 10
+./admin_biblioteca.exe vizualizare imprumuturi
+```
+
+#### Utilizator:
+
+```bash
+./utilizator_biblioteca.exe adauga carte 123 2
+./utilizator_biblioteca.exe modifica carte 123 3
+./utilizator_biblioteca.exe sterge carte 123
+./utilizator_biblioteca.exe vizualizare cos
+./utilizator_biblioteca.exe imprumuta Nume Prenume
+```
+
+---
+
+## 👤 Modul Utilizator
+
+Funcționalități disponibile:
+
+- ✅ Adăugare carte în coș
+- 🔁 Modificare număr exemplare
+- ❌ Ștergere carte din coș
+- 📋 Vizualizare coș
+- 📦 Împrumut (dacă există în stoc)
+- 🎨 Interfață grafică (Dear ImGui)
+- 🧪 Validări (numere negative, carte inexistentă, coș gol etc.)
+
+---
+
+## 🔐 Modul Administrator
+
+Funcționalități disponibile:
+
+- ➕ Adăugare carte în bibliotecă
+- ❌ Ștergere carte
+- 🔁 Modificare stoc
+- 📚 Vizualizare toate cărțile
+- 📂 Vizualizare fișe de împrumut
+- 🧪 Validări (stoc negativ, ISBN inexistent etc.)
+
+---
+
+## 🗃️ Salvare date
+
+Fișierele persistente folosite:
+
+- `carti.txt` – baza de date cu cărțile
+- `cos_utilizator.txt` – coșul curent al utilizatorului
+- `imprumuturi.txt` – fișele de împrumut salvate cronologic
+
+---
+
+## 🙋‍♂️ Autor
+
+Crăciunescu Vlad – Facultatea de Matematică și Informatică, 2025  
+Proiect realizat în cadrul cursului de Programare C++
+
+---
+
+## 📜 Licență
+
+Proiect didactic, realizat în scop educațional.  
+Utilizarea în afara contextului academic nu este permisă fără acordul autorului.
 
 Dacă ai întrebări sau feedback, mă poți contacta la:  
 📧 [vlad.craciunescu06@e-uvt.ro]
